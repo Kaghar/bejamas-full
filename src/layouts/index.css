@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway:600,700,800');
+
+
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+
+.container {
+    display:grid;
+    grid-template-rows: 13rem 50rem 40rem 15rem 20rem 45rem ;
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(12, [col-start] minmax(min-content, 7rem)[col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    grid-gap: 15px;
+    background-image: linear-gradient(#173044 46.4%, #223443 46.4%,#1b2936 46.5%,#1b2936 64.5%, #fff 60%);
+
+}
+
+.heading-1{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 7.2rem;
+}
+
+.heading-2 {
+    color: #333333;
+    font-size: 1.8rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+}
+
+.heroTitle {
+    color: #fff;
+  
+}
+
+
+.iconLogo {
+    margin-left: 2rem;
+}
+
+.iconSrc{
+    margin-right: 2.5rem;
+    cursor: pointer;
+}
+.navigationBox {
+    grid-column: center-start / center-end;
+    align-self: end;
+    height: 8rem;
+    
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 3px;
+    box-shadow: 0px -8px 5px 0px rgba(65,81,94,0.65);
+
+}
+
+.navigationList {
+    align-self: stretch;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    
+    transform: translateX(13rem);
+    
+    
+
+}
+
+.navigationList__item {
+    
+    font-size: 1.3rem;
+    width: 7rem;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    
+    border-bottom: none;
+    transition: all .2s;
+}
+.navigationList__item:hover {
+    transition: all .2s;
+    border-bottom: 5px solid #006db7;
+
+}
+
+.mainTitleBox{
+
+    grid-column: center-start / center-end;
+    align-self: center;
+    justify-self: flex-start;
+
+    text-transform: uppercase;
+    color: #fff;
+    
+    width: 40%;
+}
+.mainTitleBox::before {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 6.6rem;
+    background-color:#fdc300;
+    transform: translateY(-1rem);  
+}
+
+
+
+.navigationList__item:not(:last-child) {
+
+    
+    margin-right: 4rem;
+}
+.blogCardBox {
+    grid-column: center-start / center-end;
+    
+    height: 40rem;
+    
+    display:flex;
+    
+
+}
+
+.blogCardBox__card {
+    width: 36.3rem;
+    display: flex;
+    flex-direction: column;
+    transition: all .2s;
+    
+    
+    
+}
+
+.blogCardBox__card:hover {
+    transition: all .2s;
+    transform: scale(1.02);
+    
+    
+}
+
+.blogCardBox__card-grey{
+    background-color: #dededd;
+    height: 22.6rem;
+    width: 100%;
+
+    display:flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    
+}
+
+.blogCardBox__card-white{
+    background-color: #fff;
+    height: 17.4rem;
+    padding: 4rem 2rem 3rem 2rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.blogCardBox__card:not(:last-child) {
+    margin-right: 5rem;
+    
+}
+
+.blogCardBox__card-btn {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    width: 16.5rem;
+    height: 3.5rem;
+    background: #1b2936;
+    font-size: 1.3rem;
+    color: #fff;
+    border: none;
+    cursor:pointer;
+    
+
+}
+
+.blogCardBox__card-btn:hover {
+    background-color: #006db7;
+    transition: all .2s;
+
+}
+
+.blogCardBox__card-btn:hover .blogCardBox__card-btn--arrow {
+    background-color: #037ed1;
+    transition: all .2s;
+
+}
+
+
+.blogCardBox__card-btn--arrow {
+    background-color: #2f3840;
+    width: 3rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s;
+    
+}
+.blogCardBox__card-btn--text {
+    margin-left: 3rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+
+.blogCardBox__card-title{
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    align-self: flex-start;
+    transform: translateY(-1rem);
+}
+
+.blogCardBox__card-title::before {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 3rem;
+    background-color:#fdc300;
+    transform: translateY(-1rem);  
+}
+
+.blogCardBox__card-content{
+    font-size: 1.3rem;
+    color: #777777;
+    line-height: 1.6;
+    transform: translateY(-1.5rem);
+
+}
+
+.detailBtnBox {
+    grid-column: center-start / center-end;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+
+    
+}
+
+.detailBtnBox__btn {
+    transition: all .2s;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    width: 22rem;
+    height: 5rem;
+    background: #fdc300;
+    color: #fff;
+    border: none;
+    border-radius: 20rem;
+    cursor:pointer;
+    text-transform: uppercase;
+    transition: all .2s;
+}
+
+.detailBtnBox__btn:hover {
+    transition: all .2s;
+    transform: scale(1.02)
+}
+
+.offerTitleBox{
+    grid-column: center-start / center-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.offerTitleBox__title{
+    
+    font-size: 3rem;
+    color: #333333;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+}
+
+.offerTitleBox__subtitle{
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    color: #777777;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+
+.offerTitleBox::after{
+    content: "";
+    display: block;
+    height: 3px;
+    width: 3rem;
+    background-color:#fdc300;
+    transform: translateY(1rem); 
+}
+
+.offerBoxesBox {
+    grid-column: center-start / center-end;
+
+    display: grid;
+    grid-template-columns: repeat(2,50rem);
+    
+    grid-gap: 9rem;
+    padding: 0 5rem;
+}
+
+.offerBoxesBox__box {
+    display: grid;
+    grid-template-columns: 12rem 1fr;
+    
+
+}
+
+
+.offerBoxesBox__box-imageBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.offerBoxesBox__box-imageBox--img{
+    
+}
+.offerBoxesBox__box-textBox{
+
+}
+.offerBoxesBox__box-textBox--title {
+    margin: 2rem;
+}
+.offerBoxesBox__box-textBox--content{
+    margin: 2rem;
+    font-size: 1.3rem;
+    color: #777777;
+    line-height: 1.6;
+    text-align: justify;
+}
